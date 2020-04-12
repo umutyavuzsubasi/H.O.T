@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1110</width>
+    <height>878</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Consolas</family>
+    <pointsize>10</pointsize>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Deneme</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="accessibleName">
+   <string/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#butonBasla {
+	background-image: url('ui/buttons/baslat.png');
+	border:0;
+    border-radius:5px;
+}
+#butonBasla:hover
+{
+   background-image:url('ui/buttons/baslat-hover.png')
+}
+#butonDur {
+	background-image: url('ui/buttons/durdur.png');
+	border:0;
+    border-radius:5px;
+}
+#butonDur:hover
+{
+   background-image:url('ui/buttons/durdur-hover.png')
+}
+
+#butonIleri {
+	background-image: url('ui/buttons/yukari-ok.png');
+	border:0;
+    border-radius:5px;
+}
+#butonIleri:hover
+{
+   background-image:url('ui/buttons/yukari-ok-hover.png')
+}
+#butonGeri {
+	background-image: url('ui/buttons/asagi-ok.png');
+	border:0;
+    border-radius:5px;
+}
+#butonGeri:hover
+{
+   background-image:url('ui/buttons/asagi-ok-hover.png')
+}
+#butonSag {
+	background-image: url('ui/buttons/sag-ok.png');
+	border:0;
+    border-radius:5px;
+}
+#butonSag:hover
+{
+   background-image:url('ui/buttons/sag-ok-hover.png')
+}
+#butonSol {
+	background-image: url('ui/buttons/sol-ok.png');
+	border:0;
+    border-radius:5px;
+}
+#butonSol:hover
+{
+   background-image:url('ui/buttons/sol-ok-hover.png')
+}
+#butonLed {
+	background-image: url('ui/buttons/led.png');
+	border:0;
+    border-radius:5px;
+}
+#butonLed:hover
+{
+   background-image:url('ui/buttons/led-hover.png')
+}
+#butonZin {
+	background-image: url('ui/buttons/zoom-in.png');
+	border:0;
+    border-radius:5px;
+}
+#butonZin:hover
+{
+   background-image:url('ui/buttons/zoom-in-hover.png')
+}
+#butonZout {
+	background-image: url('ui/buttons/zoom-out.png');
+	border:0;
+    border-radius:5px;
+}
+#butonZout:hover
+{
+   background-image:url('ui/buttons/zoom-out-hover.png')
+}
+#butonSettings {
+	background-image: url('ui/buttons/options.png');
+	border:0;
+    border-radius:5px;
+}
+#butonSettings:hover
+{
+   background-image:url('ui/buttons/options-hover.png')
+}
+#butonSave {
+	background-image: url('ui/buttons/save.png');
+	border:0;
+    border-radius:5px;
+}
+#butonSave:hover
+{
+   background-image:url('ui/buttons/save-hover.png')
+}
+#butonRecord {
+	background-image: url('ui/buttons/kayit.png');
+	border:0;
+    border-radius:5px;
+}
+#butonRecord:hover
+{
+   background-image:url('ui/buttons/kayit-hover.png')
+}
+</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QPushButton" name="butonBasla">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>20</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonIleri">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>110</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonDur">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="layer">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>960</width>
+     <height>720</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="DetectionList">
+   <property name="geometry">
+    <rect>
+     <x>572</x>
+     <y>772</y>
+     <width>526</width>
+     <height>96</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="autoScroll">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonSol">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonSag">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>160</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonGeri">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>210</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="infoCihazDurumu">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>770</y>
+     <width>530</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::WinPanel</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="OLabel">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>740</y>
+     <width>170</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Tespit Oranları</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="infoKordinat">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>770</y>
+     <width>530</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::WinPanel</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="imgView">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>960</width>
+     <height>720</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="midLineWidth">
+    <number>3</number>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonLed">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>300</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonZout">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>410</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonZin">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>410</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ZLabel">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>370</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Zoom</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonSettings">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>670</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ZMLabel">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>480</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>MS Shell Dlg 2</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>S</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonSave">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>530</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="butonRecord">
+   <property name="geometry">
+    <rect>
+     <x>45</x>
+     <y>600</y>
+     <width>50</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="ConsoleList">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>772</y>
+     <width>526</width>
+     <height>96</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="autoScroll">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="OLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>740</y>
+     <width>170</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Konsol Kayıtları</string>
+   </property>
+  </widget>
+  <zorder>butonBasla</zorder>
+  <zorder>butonIleri</zorder>
+  <zorder>butonDur</zorder>
+  <zorder>butonSol</zorder>
+  <zorder>butonSag</zorder>
+  <zorder>butonGeri</zorder>
+  <zorder>infoCihazDurumu</zorder>
+  <zorder>infoKordinat</zorder>
+  <zorder>imgView</zorder>
+  <zorder>DetectionList</zorder>
+  <zorder>OLabel</zorder>
+  <zorder>layer</zorder>
+  <zorder>butonLed</zorder>
+  <zorder>butonZout</zorder>
+  <zorder>butonZin</zorder>
+  <zorder>ZLabel</zorder>
+  <zorder>butonSettings</zorder>
+  <zorder>ZMLabel</zorder>
+  <zorder>butonSave</zorder>
+  <zorder>butonRecord</zorder>
+  <zorder>ConsoleList</zorder>
+  <zorder>OLabel_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
