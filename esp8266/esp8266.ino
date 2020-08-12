@@ -15,8 +15,8 @@ static const int sagmotorpin = 14;             // D5
 
 
 // Replace with your network credentials
-const char* ssid     = "mertbaykal";
-const char* password = "11370o029";
+const char* ssid     = "ssid";
+const char* password = "password";
 
 // Set web server port number to 80
 WiFiServer server(80);
